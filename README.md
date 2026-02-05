@@ -1,0 +1,2 @@
+# AI_Assistant_report_FP-A_Human_in_the_loop_DEMO
+⭐ PEZZO FORTE sistema FP&amp;A con HITL | Query SQL su PostgreSQL ERP simulato | Integrazione LangChain + Claude/GPT-4 | Output via Streamlit + visualizzazioni Plotly | Workflow completo: Data → AI → Human Review → Report | Human -in-the-loop Implementation | Architettura integrazioni ERP/FP&amp;A | Stack tecnologico | Walkthrough demo passo-passo | 
