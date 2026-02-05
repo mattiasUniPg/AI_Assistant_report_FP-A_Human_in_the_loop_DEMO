@@ -1,0 +1,199 @@
+# FP&A Demo - Environment Variables
+# Copy this file to .env and fill in your credentials
+
+# =============================================================================
+# LLM API Keys (Choose one or both)
+# =============================================================================
+
+# Anthropic Claude API
+# Get your key at: https://console.anthropic.com/
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# OpenAI API
+# Get your key at: https://platform.openai.com/api-keys
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# =============================================================================
+# Database Configuration (PostgreSQL)
+# =============================================================================
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=company_erp_demo
+DB_USER=postgres
+DB_PASSWORD=your_password_here
+
+# Connection string (alternative to separate params)
+# DATABASE_URL=postgresql://postgres:password@localhost:5432/company_erp_demo
+
+# =============================================================================
+# Application Settings
+# =============================================================================
+
+# Environment: development | staging | production
+ENVIRONMENT=development
+
+# Debug mode
+DEBUG=True
+
+# Secret key for sessions (generate with: python -c "import secrets; print(secrets.token_hex(32))")
+SECRET_KEY=your-secret-key-here
+
+# =============================================================================
+# AI Configuration
+# =============================================================================
+
+# Model selection
+LLM_PROVIDER=anthropic  # anthropic | openai
+LLM_MODEL=claude-sonnet-4-5-20250929  # or gpt-4
+
+# Model parameters
+LLM_TEMPERATURE=0
+LLM_MAX_TOKENS=4000
+
+# Confidence thresholds for HITL
+CONFIDENCE_THRESHOLD_LOW=0.70
+CONFIDENCE_THRESHOLD_MEDIUM=0.85
+CONFIDENCE_THRESHOLD_HIGH=0.95
+
+# =============================================================================
+# Vector Database (Optional - for RAG)
+# =============================================================================
+
+# FAISS (local, no config needed)
+VECTOR_STORE_TYPE=faiss
+
+# Pinecone (cloud)
+# PINECONE_API_KEY=your-pinecone-key
+# PINECONE_ENVIRONMENT=us-west1-gcp
+
+# Weaviate (self-hosted or cloud)
+# WEAVIATE_URL=http://localhost:8080
+# WEAVIATE_API_KEY=your-weaviate-key
+
+# =============================================================================
+# Redis (for caching & task queue)
+# =============================================================================
+
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_DB=0
+REDIS_PASSWORD=
+
+# =============================================================================
+# Celery (async task processing)
+# =============================================================================
+
+CELERY_BROKER_URL=redis://localhost:6379/0
+CELERY_RESULT_BACKEND=redis://localhost:6379/0
+
+# =============================================================================
+# Logging & Monitoring
+# =============================================================================
+
+LOG_LEVEL=INFO  # DEBUG | INFO | WARNING | ERROR | CRITICAL
+
+# Sentry (error tracking) - Optional
+# SENTRY_DSN=https://xxxxx@xxxxx.ingest.sentry.io/xxxxx
+
+# =============================================================================
+# Email (for notifications) - Optional
+# =============================================================================
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+EMAIL_FROM=noreply@company-demo.com
+
+# =============================================================================
+# Streamlit Configuration
+# =============================================================================
+
+STREAMLIT_SERVER_PORT=8501
+STREAMLIT_SERVER_ADDRESS=localhost
+
+# =============================================================================
+# API Configuration (if deploying as service)
+# =============================================================================
+
+API_HOST=0.0.0.0
+API_PORT=8000
+API_WORKERS=4
+
+# CORS origins (comma-separated)
+CORS_ORIGINS=http://localhost:3000,http://localhost:8501
+
+# =============================================================================
+# Authentication (Optional)
+# =============================================================================
+
+# JWT settings
+JWT_SECRET_KEY=your-jwt-secret-key
+JWT_ALGORITHM=HS256
+JWT_EXPIRATION_MINUTES=1440  # 24 hours
+
+# Admin credentials (for demo only - use proper auth in production)
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=changeme
+
+# =============================================================================
+# Feature Flags
+# =============================================================================
+
+ENABLE_WEB_SEARCH=false
+ENABLE_RAG=true
+ENABLE_FORECASTING=true
+ENABLE_ANOMALY_DETECTION=true
+
+# =============================================================================
+# Rate Limiting
+# =============================================================================
+
+RATE_LIMIT_PER_MINUTE=60
+RATE_LIMIT_PER_HOUR=1000
+
+# =============================================================================
+# Cost Tracking
+# =============================================================================
+
+# Track LLM API costs
+ENABLE_COST_TRACKING=true
+COST_ALERT_THRESHOLD=100.00  # USD
+
+# =============================================================================
+# Development Tools
+# =============================================================================
+
+# Auto-reload on code changes
+AUTO_RELOAD=true
+
+# Enable profiling
+ENABLE_PROFILING=false
+
+# =============================================================================
+# Data Quality Checks
+# =============================================================================
+
+# Validate data before AI processing
+ENABLE_DATA_VALIDATION=true
+MAX_MISSING_VALUES_PCT=5.0
+MIN_DATA_ROWS=10
+
+# =============================================================================
+# Compliance & Audit
+# =============================================================================
+
+# Enable audit logging
+ENABLE_AUDIT_LOG=true
+AUDIT_LOG_PATH=/var/log/company/audit.log
+
+# Data retention (days)
+RETENTION_DAYS=365
+
+# =============================================================================
+# Testing
+# =============================================================================
+
+TEST_DB_NAME=company_erp_test
+TEST_MODE=false

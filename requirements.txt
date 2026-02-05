@@ -1,0 +1,114 @@
+# FP&A Demo - Python Dependencies
+
+# Core Data & Analytics
+pandas>=2.1.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Database
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+alembic>=1.12.0  # Database migrations
+
+# AI & LLM
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-anthropic>=0.1.0
+langchain-community>=0.0.20
+openai>=1.10.0
+anthropic>=0.18.0
+
+# Optional: Alternative LLM orchestration
+# llama-index>=0.9.0
+
+# Vector Databases (for RAG)
+faiss-cpu>=1.7.4
+# chromadb>=0.4.0  # Alternative vector DB
+# pinecone-client>=3.0.0  # Alternative vector DB
+
+# Machine Learning (optional extensions)
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+prophet>=1.1.0  # Time series forecasting
+statsmodels>=0.14.0
+
+# API & Web Framework
+fastapi>=0.109.0
+uvicorn>=0.27.0
+pydantic>=2.5.0
+
+# Task Queue & Caching
+celery>=5.3.0
+redis>=5.0.0
+
+# Frontend & Visualization
+streamlit>=1.30.0
+plotly>=5.18.0
+altair>=5.2.0  # Alternative to plotly
+
+# Data Validation
+great-expectations>=0.18.0  # Optional: data quality checks
+
+# Environment & Configuration
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+httpx>=0.26.0  # For testing FastAPI
+
+# Code Quality
+black>=23.12.0
+flake8>=7.0.0
+mypy>=1.8.0
+isort>=5.13.0
+
+# Utilities
+python-dateutil>=2.8.2
+pytz>=2023.3
+requests>=2.31.0
+tqdm>=4.66.0  # Progress bars
+
+# Documentation
+mkdocs>=1.5.0  # Optional: documentation generation
+mkdocs-material>=9.5.0
+
+# Logging & Monitoring
+loguru>=0.7.0
+sentry-sdk>=1.40.0  # Optional: error tracking
+
+# MLOps (optional)
+mlflow>=2.10.0
+wandb>=0.16.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.29.0
+nbconvert>=7.14.0
+
+# Excel integration (if needed)
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# PDF generation
+reportlab>=4.0.0
+pypdf2>=3.0.0
+
+# Authentication (for production)
+python-jose>=3.3.0
+passlib>=1.7.4
+bcrypt>=4.1.0
+
+# Rate limiting
+slowapi>=0.1.9
+
+# CORS
+python-multipart>=0.0.6
+
+# Deployment
+gunicorn>=21.2.0  # Production WSGI server
+
+# Development tools
+ipdb>=0.13.13  # Interactive debugger
